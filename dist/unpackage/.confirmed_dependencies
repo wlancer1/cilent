@@ -1,0 +1,12 @@
+{
+	"index.html": {
+		"resources": [
+			"static/js/app.00c37cebfd5a168e2874.js",
+			"/static/app.css",
+			"static/css/app.c380b2575f2806e3e0044a86d0a12632.css",
+			"static/js/vendor.e75ef6492a955866b8b7.js",
+			"static/js/manifest.65b911bba38d56a5a269.js",
+			"static/bootstrap.min.css"
+		]
+	}
+}
