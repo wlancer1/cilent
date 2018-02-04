@@ -2,7 +2,7 @@
   "name": "vuex2-demo",
   "version": "1.0.0",
   "description": "vue2-demo",
-  "author": "wyh",
+  "author": "赛冷思 <liumh1011@163.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
