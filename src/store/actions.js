@@ -30,7 +30,7 @@ export default {
     }) {
   
         let res = await getUser(); 
-        console.log(res)
+        // console.log(res)
         commit(types.GET_USERINFO, res.obj)
     },
     clear_local: ({

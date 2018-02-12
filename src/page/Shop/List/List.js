@@ -12,7 +12,7 @@ module.exports = {
          */
           this.initData();
         
-      var list = this.$store.state.cart.cartList;
+      var list = this.$store.state.cartList;
         for (var i = 0; i < this.shop_list.length; i++) {
             for (var j = 0; j < list.length; j++) {
                 if (list[j].id == this.shop_list[i].fid) {
@@ -45,10 +45,10 @@ module.exports = {
             //如果存在,先自增当前菜品中的num，再设置购物车的数量
             //如果不存在，直接往购物车中push一个新的菜品
             if (this.$store.state.curIndex != -1) {
-                console.log('add_db');
+                // console.log('add_db');
                 this.$store.dispatch('add_db');
             } else {
-                console.log('create_db');
+                // console.log('create_db');
                 this.$set(shop, 'num', 1);
                 this.$store.dispatch('create_db', {
                     shop
@@ -60,7 +60,7 @@ module.exports = {
          * 点击菜品列表中的减号
          */
         reduce_db(shop) {
-            console.log(shop);
+            // console.log(shop);
             var id = shop.fid;
             this.$store.dispatch('check_db', {
                 id
@@ -69,7 +69,7 @@ module.exports = {
             this.$store.dispatch('reduce_db');
         },async getdata(){
          this.$data.shop_list= await getproduct(1);
-        console.log(this.$data.shop_list);
+        // console.log(this.$data.shop_list);
      },async initData(){
         var product;
         var items;

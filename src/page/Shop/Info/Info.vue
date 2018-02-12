@@ -1,11 +1,16 @@
 <template>
     <div class="cart-info">
-        <div>
+        <div style="margin-bottom: 12px;">
             <div class='item'>总数：<strong>{{cartInfos.total_nums}}</strong></span></div>
             <div class='item'>总价：<strong>{{cartInfos.total_price}}</strong></span></div>
-
-            <div class="item pull-right btn btn-danger" @click='clear_db'>清空购物车</div>
         </div>
+          <div>  
+                 <div class="item pull-right btn btn-info" @click='create_order'>确认订单</div>
+               <div class="item pull-right btn btn-danger" @click='clear_db'>清空购物车</div>
+  
+          </div>
+            <alertconfrim v-if="showAlert" :showHide="showAlert" @closeTip="closeTip" :alertText="alertText" @confrim="confrim">
+        </alertconfrim>
     </div>
 </template>
 <script>
@@ -15,7 +20,7 @@
 <style scoped lang='less'>
     .cart-info{
         font-size: 20px;
-        text-align: left;
+        text-align: center;
 
         .item{
             display: inline-block;

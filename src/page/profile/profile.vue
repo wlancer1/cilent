@@ -63,9 +63,28 @@
                 </router-link>
                 <!-- 积分商城 -->
             
+            </section>
+              <section class="profile-1reTe">
+                <!-- 我的订单 -->
+                <router-link to='/address' class="myorder">
+                    <aside>
+                        <svg fill="#fc7b53">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#order"></use>
+                        </svg>
+                    </aside>
+                    <div class="myorder-div">
+                        <span>我的地址</span>
+                        <span class="myorder-divsvg">
+                            <svg fill="#bbb">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+                            </svg>
+                        </span>
+                    </div>
+                </router-link>
+                <!-- 积分商城 -->
+            
                 <!-- 饿了么会员卡 -->
             </section>
-
             <section class="profile-1reTe">
                 <!-- 服务中心 -->
                 <router-link to='/service' class="myorder">

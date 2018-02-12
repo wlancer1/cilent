@@ -35,12 +35,12 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
 				value: JSON.stringify(data)
 			})
 		}
-		
 		try {
 			const response = await fetch(url, requestConfig);
 			const responseJson = await response.json();
 			return responseJson
 		} catch (error) {
+			//alert('服务器连接失败')
 			throw new Error(error)
 		}
 	} else {
@@ -55,6 +55,7 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
 			let sendData = '';
 			if (type == 'POST') {
 				sendData = JSON.stringify(data);
+
 			}
 
 			requestObj.open(type, url, true);
