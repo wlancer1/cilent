@@ -7,3 +7,4 @@ export const getproduct = pageNo => fetch('/api/query_data.html', {pageNo},'GET'
 export const sendorder = (order,uid)=>fetch('/api/createorder_order.html',{order,uid},'POST');
 
 export const getOrderList=()=>fetch('/api/orderquery_order.html',{uid: getStore('user_id')},'GET');
+export const getDetailOrder=(onum)=>fetch('/api/detailquery_order.html',{onum},'GET');

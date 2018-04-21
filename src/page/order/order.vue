@@ -32,7 +32,7 @@
                     <div class="order_again">
                         <!-- <compute-time  :time="item.time_pass"></compute-time> -->
 
-                        <router-link :to="{path: '/detail', query: { id: item.orderid}}" tag="span" class="buy_again" >查看详情</router-link>
+                        <router-link :to="{path: '/detail', query:{onum:item.onum}}" tag="span" class="buy_again" >查看详情</router-link>
                     </div>
                 </section>
             </li>
@@ -141,7 +141,8 @@
             showDetail(item){
                 // this.SAVE_ORDER(item);
                 // this.preventRepeat = false;
-                this.$router.push('/detail');
+                // console.log(item);
+                this.$router.push({path:'/detail',query:{onum:item.onum}});
             },
             //生产环境与发布环境隐藏loading方式不同
             hideLoading(){
